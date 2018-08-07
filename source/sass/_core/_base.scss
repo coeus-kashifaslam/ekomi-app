@@ -77,6 +77,14 @@ ul, ol {
   border-radius: $border-radius;
 }
 
+.bg-yellow {
+  background-color: $bg-light-yellow;
+}
+
+.bg-light {
+  background-color: $bg-section-light;
+}
+
 .text-green {
   color: $text-green;
 }
