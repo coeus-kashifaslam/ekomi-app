@@ -1,0 +1,126 @@
+@mixin xlg-min {
+  @media (min-width: #{$xlg}) {
+    @content;
+  }
+}
+
+@mixin xlg-max {
+  @media (max-width: #{$xlg - 1}) {
+    @content;
+  }
+}
+
+@mixin lg-min {
+  @media (min-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin lg-max {
+  @media (max-width: #{$lg - 1}) {
+    @content;
+  }
+}
+
+@mixin md-min {
+  @media (min-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin md-max {
+  @media (max-width: #{$md - 1}) {
+    @content;
+  }
+}
+
+@mixin sm-min {
+  @media (min-width: #{$sm}) {
+    @content;
+  }
+}
+
+@mixin sm-max {
+  @media (max-width: #{$sm - 1}) {
+    @content;
+  }
+}
+
+@mixin ie-only {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+@mixin iphone-landscape {
+  @media screen and (min-width: #{$sm}) and (max-width: #{$md - 1}) and (orientation:landscape){
+    @content;
+  }
+}
+
+@mixin shadow {
+  box-shadow: 0 0 1.3rem 0 rgba(148, 148, 148, 0.48);
+}
+
+
+
+//Accepts Background color Only
+@mixin btn-fill($bg) {
+  background: $bg;
+  border: $border-width solid $bg;
+  color: $white;
+  &:hover,
+  &:focus,
+  &:active {
+    background: $bg;
+    border: $border-width solid $bg;
+  }
+}
+
+//Accepts Background/Border color Only
+@mixin btn-border($bg) {
+  //background: transparent;
+  border: $border-width solid $bg;
+  color: $bg;
+  background: linear-gradient(45deg, $bg 50%, $white 50%) no-repeat;
+  background-size: 0;
+  transition: background-size .7s ease, color .5s ease;
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: none;
+    color: $white;
+  }
+  &:hover,
+  &:focus {
+    background-size: 300%;
+  }
+  &:active {
+    background-color: $bg;
+  }
+
+}
+
+//Accepts background-color, text-color, Hover background-color, Hover text-color
+@mixin btn-colored($bg: $white, $text: $color-primary, $bg-hover: $color-primary, $text-hover: $white) {
+  background: $bg;
+  border: $border-width solid $bg;
+  color: $text;
+  &:hover,
+  &:focus,
+  &:active {
+    background: $bg-hover;
+    border: $border-width solid $bg-hover;
+    color: $text-hover;
+  }
+}
+
+
+//Placeholder Styling
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}

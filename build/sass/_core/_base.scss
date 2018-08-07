@@ -1,0 +1,106 @@
+.ie-un-supported {
+  display: none;
+}
+
+%font-light {
+  font-weight: $font-light;
+}
+
+%font-bold {
+  font-weight: $font-bold;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  color: $text-default;
+  font-family: $font-family;
+  background-color: $body-bg;
+}
+
+h1, .h1 {
+  font-size: 2.4rem;
+  @extend %font-bold;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+h2, .h2 {
+  font-size: 1.8rem;
+  @extend %font-bold;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+h3, .h3 {
+  font-size: 1.6rem;
+  @extend %font-bold;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+  min-height: 5rem;
+}
+
+main {
+  padding: 3rem 0;
+}
+
+ul, ol {
+  > li {
+    margin-bottom: 1rem;
+  }
+}
+
+.list-style-dashed {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  > li {
+    padding-left: 1rem;
+    text-indent: -1rem;
+    &:before {
+      content: "-";
+      padding-right: 1rem;
+    }
+  }
+}
+
+.bg-white {
+  background-color: $white;
+  border-radius: $border-radius;
+}
+
+.text-green {
+  color: $text-green;
+}
+
+.text-dark {
+  color: $text-dark;
+}
+
+.container {
+  max-width: $container;
+}
+
+.form-control, .form-textarea {
+  border: $border;
+  border-radius: $border-radius;
+  padding: 1.5rem 2rem;
+  @include placeholder {
+    color: $text-placeholder;
+  }
+}
+
+.section-padding-15 {
+  padding: 1.5rem;
+}
+.section-padding-30 {
+  padding: 3rem;
+}
