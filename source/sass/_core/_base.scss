@@ -45,7 +45,7 @@ h3, .h3 {
 input[type='text'],
 input[type='password'],
 input[type='email'] {
-  min-height: 5rem;
+  min-height: $control-height;
 }
 
 main {

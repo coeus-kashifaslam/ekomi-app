@@ -1,0 +1,12 @@
+.btn {
+  font-size: 1.8rem;
+  text-align: center;
+  min-width: 27.5rem;
+  border-radius: $border-radius;
+  box-shadow: none;
+  outline: none;
+}
+
+.btn-fill {
+  @include btn-fill($green-primary);
+}

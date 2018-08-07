@@ -19,7 +19,8 @@ $green-secondary: #2a9533;
 $body-bg: #f2f2f2;
 
 //Text Colors
-$text-green: #29a00a;
+//$text-green: #29a00a;
+$text-green: $green-primary;
 $text-default: #787878;
 $text-dark: #474747;
 $text-dropdown: #6a7377;
@@ -29,4 +30,8 @@ $text-placeholder: #a3a3a3;
 //Border
 $border-primary: #aaaaaa;
 $border-radius: .4rem;
-$border: .1rem solid $border-primary;
+$border-width: .1rem;
+$border: $border-width solid $border-primary;
+
+//Form
+$control-height: 5rem;
