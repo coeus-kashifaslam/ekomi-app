@@ -1,0 +1,71 @@
+.card-group {
+  > .card {
+    margin-bottom: 1.5rem;
+    border: $border;
+    border-color: $border-light;
+    border-radius: $border-radius !important;
+    + .card {
+      margin-left: 2rem;
+      border-left: $border;
+      border-color: $border-light;
+    }
+    .card__rounded-top {
+      border-radius: $border-radius $border-radius 0 0;
+    }
+    @include lg-max {
+      flex-basis: 48%;
+      &:nth-child(even) {
+        margin-left: 2rem;
+      }
+      &:nth-child(odd) {
+        margin-left: 0;
+      }
+    }
+    @include sm-max {
+      + .card {
+        margin-left: 0;
+      }
+      &:nth-child(even) {
+        margin-left: 0;
+      }
+    }
+    @include sm-min {
+      border-radius: $border-radius !important;
+      .card__rounded-top {
+        border-radius: $border-radius $border-radius 0 0 !important;
+      }
+    }
+
+  }
+  .card-body {
+    .card-info-header {
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      p {
+        margin: 0;
+        line-height: 1.2;
+        font-size: 1.4rem;
+      }
+      .text-right {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.section-subscription {
+  + .section-subscription {
+    margin-top: 4rem;
+  }
+  @include lg-min {
+    .card-group {
+      > .card {
+        flex-basis: 23%;
+        max-width: 23.5%;
+        &:nth-child(4n + 1) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

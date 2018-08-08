@@ -2,7 +2,7 @@
 $xlg: 1200px;
 $lg: 992px;
 $md: 768px;
-$sm: 480px;
+$sm: 576px;
 $container: 1140px;
 
 
@@ -33,6 +33,7 @@ $text-placeholder: #a3a3a3;
 
 //Border
 $border-primary: #aaaaaa;
+$border-light: #dfdfdf;
 $border-radius: .4rem;
 $border-width: .1rem;
 $border: $border-width solid $border-primary;
