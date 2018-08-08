@@ -1,1 +1,10 @@
-{% include '_components/modals.html' %}
+{% extends '_layout/default.html' %}
+{% set pageTitle = "Modal" %}
+{% set pageClass = "page__modals" %}
+
+
+{% block content %}
+
+    {% include '_components/modals.html' %}
+
+{% endblock %}
