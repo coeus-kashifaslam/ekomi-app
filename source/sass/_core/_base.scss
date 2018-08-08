@@ -6,6 +6,10 @@
   font-weight: $font-light;
 }
 
+%font-medium {
+  font-weight: $font-medium;
+}
+
 %font-bold {
   font-weight: $font-bold;
 }
@@ -45,7 +49,7 @@ h3, .h3 {
 input[type='text'],
 input[type='password'],
 input[type='email'] {
-  min-height: $control-height;
+  height: $control-height;
 }
 
 input[type='checkbox'] {

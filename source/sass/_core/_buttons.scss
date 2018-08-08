@@ -7,6 +7,7 @@
   outline: none;
   padding-left: 2rem;
   padding-right: 2rem;
+  @extend %font-medium;
   &:hover,
   &:focus,
   &:active {
