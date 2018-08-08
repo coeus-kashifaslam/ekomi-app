@@ -9,12 +9,12 @@
     <!--Design-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700">
-    <link rel="stylesheet" href="css/style.css?version=9478401">
+    <link rel="stylesheet" href="css/style.css?version=1333746">
     <!--[if IE]>
-    <link rel="stylesheet" href="css/browser.css?version=6153042">
+    <link rel="stylesheet" href="css/browser.css?version=7322278">
     <![endif]-->
 </head>
-<body class="page__index">
+<body class="page__index modal-open">
     <div class="container ie-un-supported">
         <p>You are running an un-supported version of Internet Explorer. Please upgrade to IE 10 or greate or to IE Edge</p>
     </div>
@@ -22,7 +22,7 @@
     
 <main>
     
-<!-- Congrats Modal -->
+<!-- Thanks Modal -->
 <div class="modal fade show modal__thanks" style="display: block;" id="thanksModal" tabindex="-1" role="dialog" aria-labelledby="thanksModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -34,24 +34,76 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body section-padding-20">
                 <div class="modal-body__section text-center modal-body__section-header">
                     <h2 class="h1 text-dark">Thanks For Your Trust</h2>
                     <p>Here is the summary of your order</p>
                 </div>
 
-                <div class="modal-body__section modal-body__section-sm">
-                    <p>You will receive a confirmation email with a summary of all infomation you need.</p>
+                <div class="modal-body__section bg-yellow section-padding-20">
+                    <h3 class="text-dark">Package: Starter Pack</h3>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium do emque laudantium, totam rem aperiam, eaque ipsa quae ab ill inventore veritat et quasi architecto beatae vitae  explicabo....</p>
+                    <div class="cta-container text-center">
+                        <button class="btn btn-border-dark">See all Included Feature</button>
+                    </div>
+                </div>
+
+                <div class="modal-body__section bg-light section-padding-20">
+                    <div class="row clearfix">
+                        <div class="col-md-8">
+                            <ul class="list-unstyled list__price-pan-detail">
+                                <li>
+                                    <label>Amount: </label><span><strong>250 Transaction per month</strong></span>
+                                </li>
+                                <li>
+                                    <label>Duration of Contract: </label><span><strong>12 months</strong></span>
+                                </li>
+                                <li>
+                                    <label>Next Billing Date: </label><span><strong>27/08/2018</strong></span>
+                                </li>
+                                <li>
+                                    <label>Next Possinle Cancelation Date: </label><span><strong>27/08/2019</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 align-self-center">
+                            <div class="price-plan__amount">
+                                <label>Price:</label>
+                                <p class="amount">&euro;29/month</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="modal-body__section">
-                    <h3 class="text-dark">Now its time to get started collecting your first reviews!</h3>
-                    <p>We are confident you will successfully consolidate your reputation</p>
+                    <form class="form__cupon-code">
+                        <div class="row clearfix">
+                            <div class="col-md-12">
+                                <label><strong>Do you have any coupon code?</strong></label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" placeholder="0245566" class="form-control">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="submit" class="btn btn-border-green" value="Update">
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        <span></span>
+                                        I would like to subscribe the package and accept the terms and condition
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
+
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-fill">Done</button>
+                <button type="button" class="btn btn-fill">Confirm and Subscribe</button>
             </div>
         </div>
     </div>

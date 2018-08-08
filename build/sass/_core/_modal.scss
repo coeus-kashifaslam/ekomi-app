@@ -63,7 +63,55 @@
   .modal-dialog {
     max-width: 65rem;
   }
+  .bg-light {
+    margin-bottom: 2rem;
+  }
 }
 .modal-body__section-header {
   margin-bottom: 3.5rem;
+}
+.modal-body__section {
+  .cta-container {
+    margin-top: 2rem;
+  }
+}
+.list__price-pan-detail {
+  margin: 0;
+  > li {
+    margin-bottom: .5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.price-plan__amount {
+  label {
+    margin-bottom: 0;
+  }
+  .amount {
+    @extend %font-bold;
+    font-size: 2.6rem;
+    margin: 0;
+  }
+  @include md-max {
+    margin-top: 2rem;
+    text-align: center;
+  }
+}
+.form-check {
+  padding-left: 0;
+}
+.form__cupon-code {
+  .form-check {
+    margin-top: 1.5rem;
+  }
+  .btn {
+    min-height: $control-height;
+    min-width: initial;
+    width: 100%;
+    @include md-max {
+      width: 100%;
+      margin: 1.5rem auto 0 auto;
+    }
+  }
 }

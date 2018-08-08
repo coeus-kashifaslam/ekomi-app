@@ -48,6 +48,42 @@ input[type='email'] {
   min-height: $control-height;
 }
 
+input[type='checkbox'] {
+  display: none;
+  + label {
+    margin: 0;
+    display: block;
+    padding-left: 2.5rem;
+    padding-top: 0;
+    word-wrap: break-word;
+    min-height: 2rem;
+    span {
+      cursor: pointer;
+      vertical-align: middle;
+      display: inline-block;
+      &:before {
+        content: '\f096';
+        font-family: $font-icons;
+        position: absolute;
+        left: 0;
+        top: -.5rem;
+        background: none;
+        font-size: 2.5rem;
+      }
+    }
+  }
+  &:checked {
+    + label {
+      span {
+        &:before {
+          color: $text-green;
+          content: "\f14a";
+        }
+      }
+    }
+  }
+}
+
 main {
   padding: 3rem 0;
 }
@@ -78,7 +114,7 @@ ul, ol {
 }
 
 .bg-yellow {
-  background-color: $bg-light-yellow;
+  background-color: $bg-section-yellow;
 }
 
 .bg-light {
@@ -101,14 +137,32 @@ ul, ol {
   border: $border;
   border-radius: $border-radius;
   padding: 1.5rem 2rem;
+  font-size: 1.6rem;
   @include placeholder {
     color: $text-placeholder;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: none;
+    border-color: $border-primary;
   }
 }
 
 .section-padding-15 {
   padding: 1.5rem;
 }
+.section-padding-20 {
+  padding: 2rem;
+  @include md-max {
+    padding: 1.5rem;
+  }
+}
 .section-padding-30 {
   padding: 3rem;
+  @include md-max {
+    padding: 1.5rem;
+  }
 }
+

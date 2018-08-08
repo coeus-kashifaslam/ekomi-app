@@ -77,15 +77,15 @@
 }
 
 //Accepts background-color, text-color, Hover background-color, Hover text-color
-@mixin btn-colored($bg: $white, $text: $color-primary, $bg-hover: $color-primary, $text-hover: $white) {
+@mixin btn-colored($bg: $white, $text: $text-dark, $border: $border-primary, $bg-hover: $text-green, $text-hover: $white, $border-hover: $text-green) {
   background: $bg;
-  border: $border-width solid $bg;
+  border: $border-width solid $border;
   color: $text;
   &:hover,
   &:focus,
   &:active {
     background: $bg-hover;
-    border: $border-width solid $bg-hover;
+    border: $border-width solid $border-hover;
     color: $text-hover;
   }
 }
