@@ -16,6 +16,10 @@
   }
 }
 
+.btn-lg {
+  min-height: $control-height;
+}
+
 .btn-fill {
   @include btn-fill($green-primary);
 }

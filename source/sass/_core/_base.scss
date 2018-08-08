@@ -125,6 +125,12 @@ input[type='radio'] {
   }
 }
 
+form {
+  .form-group {
+    margin-bottom: 2rem;
+  }
+}
+
 main {
   padding: 3rem 0;
 }
