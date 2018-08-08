@@ -9,21 +9,54 @@
     <!--Design-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-    <link rel="stylesheet" href="css/style.css?version=5723348">
+    <link rel="stylesheet" href="css/style.css?version=4282375">
     <!--[if IE]>
-    <link rel="stylesheet" href="css/browser.css?version=9187898">
+    <link rel="stylesheet" href="css/browser.css?version=565537">
     <![endif]-->
 </head>
-<body class="page__index modal-open">
+<body class="page__index">
     <div class="container ie-un-supported">
         <p>You are running an un-supported version of Internet Explorer. Please upgrade to IE 10 or greate or to IE Edge</p>
     </div>
 
     
 <main>
-    
+    <!-- Congrats Modal -->
+<div class="modal fade show modal__congrats" id="congratsModal" tabindex="-1" role="dialog" aria-labelledby="congratsModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fa fa-thumbs-up"></i>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body__section">
+                    <h2 class="h1 text-dark">Congrats, you’re all set</h2>
+                    <p>Your subscription has been recived</p>
+                </div>
+
+                <div class="modal-body__section modal-body__section-sm">
+                    <p>You will receive a confirmation email with a summary of all infomation you need.</p>
+                </div>
+
+                <div class="modal-body__section">
+                    <h3 class="text-dark">Now its time to get started collecting your first reviews!</h3>
+                    <p>We are confident you will successfully consolidate your reputation</p>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-fill">Done</button>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Thanks Modal -->
-<div class="modal fade show modal__thanks" style="display: block;" id="thanksModal" tabindex="-1" role="dialog" aria-labelledby="thanksModal" aria-hidden="true">
+<div class="modal fade show modal__thanks" id="thanksModal" tabindex="-1" role="dialog" aria-labelledby="thanksModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">

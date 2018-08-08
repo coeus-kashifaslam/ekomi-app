@@ -52,7 +52,8 @@ input[type='email'] {
   height: $control-height;
 }
 
-input[type='checkbox'] {
+input[type='checkbox'],
+input[type='radio'] {
   display: none;
   + label {
     margin: 0;
@@ -66,7 +67,6 @@ input[type='checkbox'] {
       vertical-align: middle;
       display: inline-block;
       &:before {
-        content: '\f096';
         font-family: $font-icons;
         position: absolute;
         left: 0;
@@ -81,7 +81,44 @@ input[type='checkbox'] {
       span {
         &:before {
           color: $text-green;
+        }
+      }
+    }
+  }
+}
+
+input[type='checkbox'] {
+  + label {
+    span {
+      &:before {
+        content: '\f096';
+      }
+    }
+  }
+  &:checked {
+    + label {
+      span {
+        &:before {
           content: "\f14a";
+        }
+      }
+    }
+  }
+}
+
+input[type='radio'] {
+  + label {
+    span {
+      &:before {
+        content: '\f1db';
+      }
+    }
+  }
+  &:checked {
+    + label {
+      span {
+        &:before {
+          content: "\f05d";
         }
       }
     }
