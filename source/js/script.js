@@ -3,6 +3,6 @@ $(document).ready(function(e){
 
     $('.input-group__search .input-group-text').on('click', function(e) {
        $current =  $(this);
-       $current.closest('.input-group__search').find('.form-control').toggle();
+       $current.closest('.input-group__search').toggleClass('active__search');
     });
 });
