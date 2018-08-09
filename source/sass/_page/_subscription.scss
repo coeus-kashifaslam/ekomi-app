@@ -14,6 +14,7 @@
     }
     @include lg-max {
       flex-basis: 48%;
+      max-width: 48.7%;
       &:nth-child(even) {
         margin-left: 2rem;
       }
@@ -22,6 +23,8 @@
       }
     }
     @include sm-max {
+      flex-basis: 100%;
+      max-width: none;
       + .card {
         margin-left: 0;
       }
@@ -45,6 +48,7 @@
         margin: 0;
         line-height: 1.2;
         font-size: 1.4rem;
+        white-space: nowrap;
       }
       .text-right {
         padding-left: 0;
@@ -53,8 +57,14 @@
   }
 }
 
-.section-subscription {
-  + .section-subscription {
+.section-cards {
+  .section__header {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.section-subscriptions {
+  + .section-subscriptions {
     margin-top: 4rem;
   }
   @include lg-min {

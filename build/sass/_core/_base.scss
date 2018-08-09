@@ -25,6 +25,14 @@ body {
   background-color: $body-bg;
 }
 
+a {
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
 h1, .h1 {
   font-size: 2.4rem;
   @extend %font-bold;
