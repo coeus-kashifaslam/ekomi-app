@@ -53,6 +53,10 @@
       }
     }
   }
+}
+
+.list__header-filters {
+  
   .dropdown__languages {
     &.btn-group {
       .dropdown-toggle {
@@ -89,6 +93,8 @@
       }
     }
   }
+
+
   .input-group__search {
     .input-group-text {
       pointer-events: none;
