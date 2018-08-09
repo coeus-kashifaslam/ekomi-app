@@ -21,10 +21,15 @@
 
 .sidebar__dropdown {
   @include lg-min {
-   .dropdown-menu {
-     display: block;
-     border: 0 none;
-   }
+    .dropdown-toggle {
+      display: none;
+    }
+    .dropdown-menu {
+      display: block;
+      border: 0 none;
+      position: relative !important;
+      transform: none !important;
+    }
   }
 
   .dropdown-menu {
