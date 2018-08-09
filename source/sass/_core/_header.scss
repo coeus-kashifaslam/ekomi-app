@@ -1,0 +1,127 @@
+.app-logo {
+  a {
+    color: $white;
+    font-family: $font-arial;
+    @extend %font-bold;
+    font-style: italic;
+    font-size: 2rem;
+    display: block;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      text-decoration: none;
+    }
+    @include md-max {
+      font-size: 1rem;
+      img {
+        width: 6.3rem;
+      }
+    }
+  }
+}
+
+.nav-area__top {
+  background-color: $green-primary;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border: $border;
+  border-color: $border-green;
+
+  @include md-max {
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+    .d-relative-md {
+      position: relative;
+    }
+  }
+}
+.nav-area__bottom {
+  background-color: $green-secondary;
+  min-height: 5rem;
+}
+
+.list__header-filters {
+  margin: 0;
+  > li {
+    display: inline-block;
+    margin: 0;
+    + li {
+      margin-left: 1.5rem;
+      @include md-max {
+        margin-left: 0;
+      }
+    }
+  }
+  .dropdown__languages {
+    &.btn-group {
+      .dropdown-toggle {
+        min-width: 10rem;
+        text-transform: uppercase
+      }
+      @include md-max {
+        background-color: transparent;
+        .dropdown-toggle {
+          min-width: initial;
+          background-color: transparent;
+          border: 1px solid transparent;
+          line-height: 1.8;
+          padding-right: 3.5rem;
+          color: $white;
+          .caret {
+            &:before {
+              color: $white;
+            }
+          }
+        }
+        &.show {
+          .dropdown-toggle {
+            border: $border;
+            background-color: $white;
+            color: $text-dark;
+            .caret {
+              &:before {
+                color: $text-dark;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .input-group__search {
+    .input-group-text {
+      pointer-events: none;
+      font-size: 1.8rem;
+      padding: 0 1.5rem;
+      background-color: $white;
+      border-left: 0 none;
+      border-color: $border-primary;
+      border-radius: 0 $border-radius $border-radius 0;
+    }
+    .form-control {
+      border-right: 0 none;
+      padding-right: 0;
+    }
+    @include md-max {
+      position: static;
+      .form-control {
+        display: none;
+        width: calc(100% + 3rem);
+        position: absolute;
+        left: -1.5rem;
+        right: -1.5rem;
+        border-radius: .5rem;
+        top: calc(100% + 1rem);
+      }
+      .input-group-text {
+        pointer-events: all;
+        padding: 0;
+        cursor: pointer;
+        background: transparent;
+        border: 0 none;
+        color: white;
+      }
+    }
+  }
+}
