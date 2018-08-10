@@ -1,0 +1,64 @@
+body.page__store-app {
+   header {
+    h2 {
+      &.title {
+        color: $green-primary;
+        font-size: 2rem;
+      }
+    }
+  } 
+}
+.section-store-app {
+  @include lg-min {
+  }
+}
+
+.col__aside-right {
+  @include lg-min {
+    padding-right: 0;
+  }
+  
+  .btn {
+    min-width: 23rem;
+  }
+}
+
+.col__content {
+  padding: 2rem;
+  
+  @include lg-min {
+    &.no__pad {
+      padding: 0;
+    }
+  }
+}
+
+.img-placeholder {
+  img {
+    border-radius: 0.4rem;
+    max-height: 34.1rem;
+    width: 100%;
+  }
+}
+
+.detail__info {
+  b {
+    padding-left: 1rem;
+  }
+  span {
+    &.info {
+      display: block;
+      padding-left: 2.8rem;
+    }
+  }
+}
+
+.starter-app {
+  >li {
+    &:before {
+      content: "-";
+      padding-right: 1rem;
+      font-weight: 700;
+    }
+  }
+}

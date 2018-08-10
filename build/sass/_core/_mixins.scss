@@ -1,0 +1,102 @@
+@mixin xlg-min {
+  @media (min-width: #{$xlg}) {
+    @content;
+  }
+}
+
+@mixin xlg-max {
+  @media (max-width: #{$xlg - 1}) {
+    @content;
+  }
+}
+
+@mixin lg-min {
+  @media (min-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin lg-max {
+  @media (max-width: #{$lg - 1}) {
+    @content;
+  }
+}
+
+@mixin md-min {
+  @media (min-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin md-max {
+  @media (max-width: #{$md - 1}) {
+    @content;
+  }
+}
+
+@mixin sm-min {
+  @media (min-width: #{$sm}) {
+    @content;
+  }
+}
+
+@mixin sm-max {
+  @media (max-width: #{$sm - 1}) {
+    @content;
+  }
+}
+
+@mixin ie-only {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+@mixin iphone-landscape {
+  @media screen and (min-width: #{$sm}) and (max-width: #{$md - 1}) and (orientation:landscape){
+    @content;
+  }
+}
+
+@mixin shadow {
+  box-shadow: 0 0 1rem 0 rgba(148, 148, 148, 0.30);
+}
+
+@mixin nav-shadow {
+  box-shadow: 0 .7rem 1rem .2rem rgba(148,148,148, 0.7);
+}
+//Accepts Background color Only
+@mixin btn-fill($bg) {
+  background: $bg;
+  border: $border-width solid $bg;
+  color: $white;
+  &:hover,
+  &:focus,
+  &:active {
+    background: $bg;
+    border: $border-width solid $bg;
+  }
+}
+
+//Accepts background-color, text-color, Hover background-color, Hover text-color
+@mixin btn-colored($bg: $white, $text: $text-dark, $border: $border-primary, $bg-hover: $text-green, $text-hover: $white, $border-hover: $text-green) {
+  background: $bg;
+  border: $border-width solid $border;
+  color: $text;
+  &:hover,
+  &:focus,
+  &:active {
+    background: $bg-hover;
+    border: $border-width solid $border-hover;
+    color: $text-hover;
+  }
+}
+
+
+//Placeholder Styling
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}

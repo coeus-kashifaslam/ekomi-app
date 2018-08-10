@@ -1,0 +1,33 @@
+.btn {
+  font-size: 1.8rem;
+  text-align: center;
+  min-width: 25rem;
+  border-radius: $border-radius;
+  box-shadow: none;
+  outline: none;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  @extend %font-medium;
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.btn-lg {
+  min-height: $control-height;
+}
+
+.btn-fill {
+  @include btn-fill($green-primary);
+}
+
+.btn-border-dark {
+  @include btn-colored();
+}
+
+.btn-border-green {
+  @include btn-colored($white, $text-green, $text-green, $text-green, $white, $text-green);
+}

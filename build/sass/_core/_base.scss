@@ -1,0 +1,261 @@
+.ie-un-supported {
+  display: none;
+}
+
+%font-light {
+  font-weight: $font-light;
+}
+
+%font-medium {
+  font-weight: $font-medium;
+}
+
+%font-bold {
+  font-weight: $font-bold;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  color: $text-default;
+  font-family: $font-family;
+  background-color: $body-bg;
+}
+
+a {
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+h1, .h1 {
+  font-size: 2.4rem;
+  @extend %font-bold;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.lead-h2 {
+  font-size: 2rem;
+}
+
+h2, .h2 {
+  font-size: 1.8rem;
+  @extend %font-bold;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+h3, .h3 {
+  font-size: 1.6rem;
+  @extend %font-bold;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+  height: $control-height;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  display: none;
+  + label {
+    margin: 0;
+    display: block;
+    padding-left: 2.5rem;
+    padding-top: 0;
+    word-wrap: break-word;
+    min-height: 2rem;
+    span {
+      cursor: pointer;
+      vertical-align: middle;
+      display: inline-block;
+      &:before {
+        font-family: $font-icons;
+        position: absolute;
+        left: 0;
+        top: -.5rem;
+        background: none;
+        font-size: 2.5rem;
+      }
+    }
+  }
+  &:checked {
+    + label {
+      span {
+        &:before {
+          color: $text-green;
+        }
+      }
+    }
+  }
+}
+
+input[type='checkbox'] {
+  + label {
+    span {
+      &:before {
+        content: '\f096';
+      }
+    }
+  }
+  &:checked {
+    + label {
+      span {
+        &:before {
+          content: "\f14a";
+        }
+      }
+    }
+  }
+}
+
+input[type='radio'] {
+  + label {
+    span {
+      &:before {
+        content: '\f1db';
+      }
+    }
+  }
+  &:checked {
+    + label {
+      span {
+        &:before {
+          content: "\f05d";
+        }
+      }
+    }
+  }
+}
+
+form {
+  .form-group {
+    margin-bottom: 2rem;
+  }
+}
+
+main {
+  padding: 3rem 0;
+}
+
+ul, ol {
+  > li {
+    margin-bottom: 1rem;
+  }
+}
+
+.list-style-dashed {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  > li {
+    padding-left: 1rem;
+    text-indent: -1rem;
+    &:before {
+      content: "-";
+      padding-right: 1rem;
+    }
+  }
+}
+
+.list-style-dashed-inline {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  > li {
+    display: inline-block;
+    vertical-align: middle;
+    + li {
+      padding-left: 2rem;
+      margin-left: 2rem;
+      position: relative;
+      &:before {
+        content: "";
+        width: .5rem;
+        height: .2rem;
+        padding-right: 1rem;
+        position: absolute;
+        left: -.7rem;
+        top: calc(50% - .1rem);
+        background-color: $white;
+      }
+    }
+  }
+}
+
+.list-inline {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  > li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.bg-white {
+  background-color: $white;
+  border-radius: $border-radius;
+}
+
+.bg-yellow {
+  background-color: $bg-section-yellow;
+}
+
+.bg-light {
+  background-color: $bg-section-light;
+}
+
+.text-green {
+  color: $text-green;
+}
+
+.text-dark {
+  color: $text-dark;
+}
+
+.container {
+  max-width: $container;
+}
+
+.form-control, .form-textarea {
+  border: $border;
+  border-radius: $border-radius;
+  padding: 1.5rem 2rem;
+  font-size: 1.6rem;
+  @include placeholder {
+    color: $text-placeholder;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: none;
+    border-color: $border-primary;
+  }
+}
+
+.section-padding-15 {
+  padding: 1.5rem;
+}
+.section-padding-20 {
+  padding: 2rem;
+  @include md-max {
+    padding: 1.5rem;
+  }
+}
+.section-padding-30 {
+  padding: 3rem;
+  @include md-max {
+    padding: 1.5rem;
+  }
+}
