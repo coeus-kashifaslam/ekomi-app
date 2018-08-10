@@ -1,3 +1,7 @@
+.site__header {
+  @include nav-shadow();
+}
+
 .app-logo {
   a {
     color: $white;
@@ -29,16 +33,12 @@
   border-color: $border-green;
 
   @include md-max {
-    padding-top: .7rem;
-    padding-bottom: .7rem;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
     .d-relative-md {
       position: relative;
     }
   }
-}
-.nav-area__bottom {
-  background-color: $green-secondary;
-  min-height: 5rem;
 }
 
 .list__header-filters {
@@ -70,11 +70,20 @@
           background-color: transparent;
           border: 1px solid transparent;
           line-height: 1.8;
-          padding-right: 3.5rem;
+          padding: 1.1rem 2.7rem 1.1rem 1.1rem;
           color: $white;
           .caret {
+            font-size: 2rem;
+            right: 1rem;
             &:before {
               color: $white;
+            }
+          }
+        }
+        .dropdown-menu {
+          li {
+            a {
+              padding: 1.1rem;
             }
           }
         }
@@ -116,7 +125,7 @@
           display: block;
         }
         .input-group-append {
-          &:after {
+          &:after, &:before {
             display: block;
           }
         }
@@ -129,6 +138,7 @@
         right: -1.5rem;
         border-radius: .5rem;
         top: calc(100% + 1rem);
+        border-right: $border;
       }
       .input-group-text {
         pointer-events: all;
@@ -137,6 +147,7 @@
         background: transparent;
         border: 0 none;
         color: white;
+        font-size: 1.6rem;
       }
       .input-group-append {
         position: relative;
@@ -153,6 +164,140 @@
           width: 0;
           z-index: 5;
         }
+        &:before {
+          display: none;
+          border-bottom: 2.6rem solid $border-primary;
+          border-left: 1.1rem solid transparent;
+          border-right: 1.1rem solid transparent;
+          content: "";
+          height: 0;
+          position: absolute;
+          right: -.3rem;
+          top: 1.7rem;
+          width: 0;
+          z-index: 5;
+        }
+      }
+    }
+  }
+}
+
+//Nav Bottom
+.nav-area__bottom {
+  background-color: $green-secondary;
+  ul {
+    margin: 0;
+    > li {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
+.dropdown-menu {
+  font-size: 1.6rem;
+  @include shadow();
+  border-radius: $border-radius !important;
+  > a {
+    display: block;
+    padding: 1rem 2rem;
+    line-height: 2.5rem;
+    font-size: 1.6rem;
+    color: $text-dropdown;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: $text-dropdown;
+      background-color: $body-bg;
+    }
+    &.active {
+      @extend %font-bold;
+    }
+  }
+  .dropdown-divider {
+    margin: 0;
+  }
+}
+.col-nav__left,
+.col-nav__right {
+  max-height: 6.4rem;
+  > ul {
+    > li {
+      a {
+        display: block;
+        &:hover,
+        &:focus,
+        &:active {
+          text-decoration: none;
+        }
+      }
+      > a {
+        color: $white;
+        line-height: 6rem;
+      }
+      &.active {
+        border-bottom: .4rem solid $white;
+        > a {
+          @extend %font-medium;
+        }
+      }
+    }
+  }
+
+  .dropdown-toggle {
+    position: relative;
+    &:after {
+      display: none;
+      border-bottom: 1.1rem solid $white;
+      border-left: 1rem solid transparent;
+      border-right: 1rem solid transparent;
+      border-top: 0 none;
+      content: "";
+      height: 0;
+      position: absolute;
+      right: 50%;
+      top: auto;
+      bottom: -.5rem;
+      width: 0;
+      z-index: 9999;
+    }
+    &:before {
+      display: none;
+      border-bottom: 1.2rem solid $border-primary;
+      border-left: 1.1rem solid transparent;
+      border-right: 1.1rem solid transparent;
+      content: "";
+      height: 0;
+      position: absolute;
+      right: calc(50% - .1rem);
+      top: auto;
+      bottom: -.4rem;
+      width: 0;
+      z-index: 999;
+    }
+    &[aria-expanded='true'] {
+      &:after,
+      &:before {
+        display: block;
+      }
+    }
+    .fa {
+      font-size: 1.8rem;
+      margin-left: .5rem;
+      @include md-max {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+.col-nav__left {
+  > ul {
+    > li {
+      + li {
+        margin-left: 4rem;
       }
     }
   }

@@ -167,6 +167,40 @@ ul, ol {
   }
 }
 
+.list-style-dashed-inline {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  > li {
+    display: inline-block;
+    + li {
+      padding-left: 2rem;
+      margin-left: 2rem;
+      position: relative;
+      &:before {
+        content: "";
+        width: .5rem;
+        height: .2rem;
+        padding-right: 1rem;
+        position: absolute;
+        left: -.7rem;
+        top: calc(50% - .1rem);
+        background-color: $white;
+      }
+    }
+  }
+}
+
+.list-inline {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  > li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
 .bg-white {
   background-color: $white;
   border-radius: $border-radius;
