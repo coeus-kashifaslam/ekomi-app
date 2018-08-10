@@ -173,6 +173,7 @@ ul, ol {
   padding-left: 0;
   > li {
     display: inline-block;
+    vertical-align: middle;
     + li {
       padding-left: 2rem;
       margin-left: 2rem;

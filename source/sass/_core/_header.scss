@@ -197,10 +197,9 @@ $line-height-border-desktop: $line-height-desktop + .4rem;
   }
 }
 
-
-
 .dropdown-menu {
   font-size: 1.6rem;
+  margin-top: -.1rem;
   @include shadow();
   border-radius: $border-radius !important;
   > a {
@@ -230,7 +229,8 @@ $line-height-border-desktop: $line-height-desktop + .4rem;
 .col-nav__right {
   max-height: $line-height-border-desktop;
   @include md-max {
-    max-height: $line-height-border-mobile
+    max-height: $line-height-border-mobile;
+    max-width: 50%;
   }
   > ul {
     > li {
@@ -261,6 +261,7 @@ $line-height-border-desktop: $line-height-desktop + .4rem;
 
   .dropdown-toggle {
     position: relative;
+    padding-right: 2.5rem;
     &:after {
       display: none;
       border-bottom: 1.1rem solid $white;
@@ -270,7 +271,7 @@ $line-height-border-desktop: $line-height-desktop + .4rem;
       content: "";
       height: 0;
       position: absolute;
-      right: calc(50% - .4rem);
+      right: 1.4rem;
       top: auto;
       bottom: -.5rem;
       width: 0;
@@ -284,7 +285,7 @@ $line-height-border-desktop: $line-height-desktop + .4rem;
       content: "";
       height: 0;
       position: absolute;
-      right: calc(50% - .5rem);
+      right: 1.3rem;
       top: auto;
       bottom: -.4rem;
       width: 0;
@@ -297,8 +298,12 @@ $line-height-border-desktop: $line-height-desktop + .4rem;
       }
     }
     .fa {
-      font-size: 1.8rem;
-      margin-left: .5rem;
+      font-size: 2.5rem;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      line-height: 0;
       @include md-max {
         font-size: 1.6rem;
       }
@@ -314,6 +319,18 @@ $line-height-border-desktop: $line-height-desktop + .4rem;
       @include md-max {
         display: none;
       }
+    }
+  }
+
+  .dropdown {
+    > a {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    @include md-max {
+      display: block;
     }
   }
 }
