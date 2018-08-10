@@ -1,0 +1,70 @@
+{% extends '_layout/default.html' %}
+{% set pageTitle = "eKomi | Store" %}
+{% set pageClass = "page__store-app" %}
+
+{% block content %}
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col__content no__pad">
+                <header>
+                    <h2 class="title">Starter App</h2>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-9 col__content no__pad">
+                <div class="section-store-app">
+                    <div class="section__body">
+                        <div class="img-placeholder">
+                            <img class="img-fluid" src="img/img-01.jpg" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col__aside-right">
+                <aside class="sidebar">
+                    <div class="sidebar__body">
+                        <div class="bg-white shadow-sm col__content">
+                            <div class="subscription__details text-center mt-5">
+                                <p>Price: <b>&euro;29</b></p>
+                                <p>Subscription: <b>Monthly</b></p>
+                                <a href="" class="btn btn-success">Subscribe</a>
+                            </div>
+                        </div>
+                        <div class="bg-white shadow-sm col__content mt-4">
+                           <div class="detail__info">
+                               <div class="amount">
+                                   <i class="fa fas-facebook"></i>
+                                   <p><b>Amount</b>250 Transaction per month</p>
+                               </div>
+                               <div class="contract-duration">
+                                   <i class="fa fas-facebook"></i>
+                                   <p><b>Duration of contract</b>12 month</p>
+                               </div>
+                           </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-12 bg-white shadow-sm col__content">
+                <h2>Details</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum mollitia nesciunt ipsam excepturi hic deserunt quae, modi aut sed, nostrum repudiandae. Dignissimos id, cumque voluptas soluta libero, recusandae officiis veritatis!
+                </p>
+                <ul class="mt-5 list-unstyled">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
