@@ -36,15 +36,29 @@ body.page__store-app {
 .img-placeholder {
   img {
     border-radius: 0.4rem;
-    max-height: 39.4rem;
+    max-height: 34.1rem;
     width: 100%;
   }
 }
 
 .detail__info {
-  p {
-    b {
+  b {
+    padding-left: 1rem;
+  }
+  span {
+    &.info {
       display: block;
+      padding-left: 2.8rem;
+    }
+  }
+}
+
+.starter-app {
+  >li {
+    &:before {
+      content: "-";
+      padding-right: 1rem;
+      font-weight: 700;
     }
   }
 }
