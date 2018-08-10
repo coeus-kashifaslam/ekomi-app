@@ -231,6 +231,7 @@ $line-height-border-desktop: $line-height-desktop + .4rem;
   @include md-max {
     max-height: $line-height-border-mobile;
     max-width: 50%;
+    flex-basis: 50%;
   }
   > ul {
     > li {
@@ -330,7 +331,7 @@ $line-height-border-desktop: $line-height-desktop + .4rem;
       white-space: nowrap;
     }
     @include md-max {
-      display: block;
+      max-width: 13rem;
     }
   }
 }
@@ -350,6 +351,7 @@ $line-height-border-desktop: $line-height-desktop + .4rem;
 
 .col-nav__right {
   @include md-max {
+    text-align: right;
     .list-style-dashed-inline {
       > li {
         + li {
