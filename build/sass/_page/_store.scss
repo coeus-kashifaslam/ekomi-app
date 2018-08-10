@@ -1,0 +1,17 @@
+.section-store {
+  @include lg-min {
+    .card-group {
+      > .card {
+        flex-basis: 33.333%;
+        max-width: 31.5%;
+        &:nth-child(3n + 1) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.col__content {
+  padding: 2rem;
+}
